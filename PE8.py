@@ -1,10 +1,5 @@
 #https://projecteuler.net/problem=8
 
-'''
-TODO:
-Implement sliding window: https://www.geeksforgeeks.org/window-sliding-technique/
-'''
-
 from TimeCode import timeCode
 
 def projectEuler8():
@@ -39,6 +34,6 @@ def projectEuler8():
         if product>largest:
             largest = product
             
-    print(largest)
+    print(int(largest))
 
 timeCode(projectEuler8)

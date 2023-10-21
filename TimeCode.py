@@ -1,5 +1,12 @@
 #Script used to time code (mostly for Project Euler)
 
+'''
+To Use:
+
+from TimeCode import timeCode
+timeCode(functionName)
+'''
+
 import time
 
 def timeCode(function):
