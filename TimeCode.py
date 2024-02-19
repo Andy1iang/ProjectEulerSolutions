@@ -14,10 +14,12 @@ def timeCode(function):
     function() 
     elapsed = time.time()-t1 #time after function runs - t1
     
+    resFormat = 'Code Executed in: '
+    
     #formatting the seconds & converting units to be more readable
     if elapsed < 0.000001:
-        print(f'{elapsed*1000000:.3f} microseconds')
+        print(f'{resFormat}{elapsed*1000000:.3f} Microseconds')
     elif elapsed < 0.001:
-        print(f'{elapsed*1000:.3f} milliseconds')
+        print(f'{resFormat}{elapsed*1000:.3f} Milliseconds')
     else:
-        print(f'{elapsed:.3f} seconds')
+        print(f'{resFormat}{elapsed:.3f} Seconds')

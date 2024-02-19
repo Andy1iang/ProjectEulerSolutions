@@ -20,4 +20,5 @@ def projectEuler3():
     
     print(primeFac(600851475143,2))
     
-timeCode(projectEuler3)
+#timeCode(projectEuler3)
+projectEuler3()
