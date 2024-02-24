@@ -6,7 +6,7 @@ from TimeCode import timeCode
 def projectEuler808():
 
     primes = sievePrimes(int(1E8))
-    primeSquared = {x**2 for x in primes}
+    primeSquared = {x**2 for x in primes}  # putting square of primes in a set
 
     total = 0
     count = 0

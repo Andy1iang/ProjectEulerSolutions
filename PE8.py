@@ -1,6 +1,7 @@
-#https://projecteuler.net/problem=8
+# https://projecteuler.net/problem=8
 
 from TimeCode import timeCode
+
 
 def projectEuler8():
     jumbo = "73167176531330624919225119674426574742355349194934\
@@ -23,17 +24,20 @@ def projectEuler8():
 84580156166097919133875499200524063689912560717606\
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450"""
-            
+
+    # looping through the numbers and checking
+
     largest = 0
-    for i in range(0,len(jumbo)-13):
+    for i in range(0, len(jumbo)-13):
         product = int(jumbo[i])
-        
-        for j in range(i+1,i+13):
-            product*= int(jumbo[j])
-            
-        if product>largest:
+
+        for j in range(i+1, i+13):
+            product *= int(jumbo[j])
+
+        if product > largest:
             largest = product
-            
+
     print(int(largest))
+
 
 timeCode(projectEuler8)

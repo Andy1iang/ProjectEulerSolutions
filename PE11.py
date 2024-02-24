@@ -1,9 +1,10 @@
-#https://projecteuler.net/problem=11
+# https://projecteuler.net/problem=11
 
 from TimeCode import timeCode
 
+
 def projectEuler11():
-    
+
     grid = [
         [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
         [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
@@ -26,45 +27,46 @@ def projectEuler11():
         [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
         [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
     ]
-    
+
     largest = 0
-    
-    #row-first search
-    for i in range(0,20):
-        for j in range(0,16):
+
+    # row-first search
+    for i in range(0, 20):
+        for j in range(0, 16):
             product = 1
-            for k in range(0,4):
+            for k in range(0, 4):
                 product *= grid[i][j+k]
             if product > largest:
                 largest = product
-           
-    #column-first search     
-    for i in range(0,16):
-        for j in range(0,20):
+
+    # column-first search
+    for i in range(0, 16):
+        for j in range(0, 20):
             product = 1
-            for k in range(0,4):
+            for k in range(0, 4):
                 product *= grid[i+k][j]
             if product > largest:
                 largest = product
-    
-    #Top Left to Bottom Right Diagonal Search
-    for i in range(0,16):
-        for j in range(0,16):
+
+    # Top Left to Bottom Right Diagonal Search
+    for i in range(0, 16):
+        for j in range(0, 16):
             product = 1
-            for k in range(0,4):
+            for k in range(0, 4):
                 product *= grid[i+k][j+k]
             if product > largest:
                 largest = product
-    
-    #Diagonal search going the other way
-    for i in range(4,20):
-        for j in range(0,16):
+
+    # Diagonal search going the other way
+    for i in range(4, 20):
+        for j in range(0, 16):
             product = 1
-            for k in range(0,4):
+            for k in range(0, 4):
                 product *= grid[i-k][j+k]
             if product > largest:
                 largest = product
-    
+
     print(largest)
-    
+
+
 timeCode(projectEuler11)

@@ -23,15 +23,15 @@ def projectEuler18():
                 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
               '''
 
-    levels = [list(map(int,x.strip().split())) for x in pyramid.strip().split('\n')]
+    levels = [list(map(int, x.strip().split()))
+              for x in pyramid.strip().split('\n')]
     levels.reverse()
 
+    # taking the maximum for the bases, adding to number above, until at the top
     for i in range(1, len(levels)):
 
         for j in range(len(levels[i])):
             levels[i][j] += max(levels[i-1][j], levels[i-1][j+1])
-            
-
 
     print(levels[-1][0])
 

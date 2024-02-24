@@ -1,4 +1,4 @@
-#https://projecteuler.net/problem=3
+# https://projecteuler.net/problem=3
 
 '''
 Lessons:
@@ -10,15 +10,20 @@ Lessons:
 
 from TimeCode import timeCode
 
+
 def projectEuler3():
-    
-    def primeFac(num,divis):
-        for i in range(divis,int(num**(1/2))+2): #looping from denominator to sqrt of numerator
-            if num%i == 0:
-                return(primeFac(num/i,i)) #recursive call if number could be divided
+        
+    def primeFac(num, divisor):
+
+        # looping from denominator to sqrt of numerator
+        for i in range(divisor, int(num**(1/2))+2):
+            if num % i == 0:
+                # recursive call if number could be divided
+                return (primeFac(num/i, i))
+            
         return int(num)
-    
-    print(primeFac(600851475143,2))
-    
-#timeCode(projectEuler3)
-projectEuler3()
+
+    print(primeFac(600851475143, 2))
+
+
+timeCode(projectEuler3)
