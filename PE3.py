@@ -1,7 +1,7 @@
 # https://projecteuler.net/problem=3
 
 '''
-Lessons:
+Learned:
 --Prime Factorization Finds the largest prime divisor
   --Process: try to divide numerator by 2, if it can't, try 3, and so on, until square root of numerator,
              the numerator is largest prime divisor if end of loops hits, if numerator can be divided, 
