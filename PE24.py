@@ -1,7 +1,16 @@
+# https://projecteuler.net/problem=24
+
 import itertools
+from TimeCode import timeCode
 
-nums = '0123456789'
 
-perms = [''.join(p) for p in itertools.permutations(nums)]
+def projectEuler24():
 
-print(perms[999999])
+    # getting all permutations
+    perms = [''.join(p) for p in itertools.permutations('0123456789')]
+
+    # getting the millionth iterations
+    print(perms[999999])
+
+
+timeCode(projectEuler24)

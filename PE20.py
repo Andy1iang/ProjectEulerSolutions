@@ -6,7 +6,7 @@ import math
 
 
 def projectEuler20():
-    print(sum(int(i) for i in str(math.factorial(100))))
+    print(sum(int(i) for i in str(math.factorial(100))))  # one-liner ;)
 
 
 timeCode(projectEuler20)

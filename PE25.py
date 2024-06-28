@@ -1,10 +1,18 @@
-a = 1
-b = 2
+# https://projecteuler.net/problem=25
 
-count = 2
+from TimeCode import timeCode
 
-while len(str(a)) < 1000:
-    a, b = b, a + b
-    count += 1
+def projectEuler25():
 
-print(count)
+    a = 1
+    b = 2
+
+    count = 2
+
+    while len(str(a)) < 1000:
+        a, b = b, a + b
+        count += 1
+
+    print(count)
+
+timeCode(projectEuler25)

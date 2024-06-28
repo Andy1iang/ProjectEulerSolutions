@@ -1,4 +1,5 @@
 # https://projecteuler.net/problem=836
+# aprilsfoolsjoke
 
 from TimeCode import timeCode
 

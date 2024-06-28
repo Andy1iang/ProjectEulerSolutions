@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=23
+
 from TimeCode import timeCode
 
 
@@ -5,12 +7,13 @@ def projectEuler23():
 
     total = 0
     abundants = set()
-    all = set()
 
+    # going to upper limit & finding all abundant numbers
     for i in range(1, 28123):
         if sumDivisors(i) > i:
             abundants.add(i)
 
+    # checking if the number can be represented as the sum of two abundant numbers
     for i in range(1, 28123):
         for a in abundants:
             if (i - a) in abundants:
@@ -19,6 +22,8 @@ def projectEuler23():
             total += i
 
     print(total)
+
+# function to get sum of divisors
 
 
 def sumDivisors(n):
