@@ -6,7 +6,6 @@ from TimeCode import timeCode
 def projectEuler2():
 
     # fibonacci sequence
-
     a = 0
     b = 1
     sum = 0

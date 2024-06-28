@@ -10,9 +10,11 @@ from TimeCode import timeCode
 
 def projectEuler6():
 
+    n = 100
+
     # formulas for sums
-    sqSum = 100*101*201/6
-    sumSQ = (101*100/2)**2
+    sqSum = n*(n+1)*(2*n+1)/6
+    sumSQ = (n*(n+1)/2)**2
 
     print(int(sumSQ-sqSum))
 
